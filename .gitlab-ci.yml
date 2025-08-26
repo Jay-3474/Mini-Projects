@@ -1,0 +1,52 @@
+---
+stages:
+  - build
+
+test-gcc-debug:
+  stage: build
+  image: jaychitroda/myapp:gcc
+  variables:
+    BUILD_DIR: build-${CI_PIPELINE_ID}
+  script:
+    - apt-get update
+    - apt-get install python3-pip -y
+    - pip install robotframework
+    - mkdir ${BUILD_DIR}
+    - cd ${BUILD_DIR}
+    - cmake ..
+    - cmake --build .
+  tags:
+    - practice
+  artifacts:
+    when: always
+    paths:
+      - ${CI_PROJECT_DIR}
+    expire_in: 1 week
+
+lint:
+  stage: build
+  image: jaychitroda/myapp:lint
+  script:
+    - pre-commit run --all-files --show-diff-on-failure
+  tags:
+    - practice
+
+test-clang-tidy:
+  stage: build
+  image: jaychitroda/myapp:clang-tidy
+  variables:
+    BUILD_DIR: build-${CI_PIPELINE_ID}
+  script:
+    - apt-get install python3-pip -y
+    - pip install robotframework
+    - mkdir ${BUILD_DIR}
+    - cd ${BUILD_DIR}
+    - cmake ..
+    - cmake --build .
+  tags:
+    - practice
+  artifacts:
+    when: always
+    paths:
+      - ${CI_PROJECT_DIR}
+    expire_in: 1 week
