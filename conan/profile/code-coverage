@@ -1,0 +1,6 @@
+[settings]
+build_type=Debug
+compiler.libcxx=libstdc++11
+
+[env]
+general:CXXFLAGS="-DNDEBUG -Werror -Wall -Wconversion -Wextra -Wpedantic -Wconversion -Wshadow -coverage -fdiagnostics-color=always -fno-exceptions"

@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+PROJECT_DIR=$(
+    cd "$(dirname "$0")/.."
+    pwd
+)
+
+conan profile new \
+    --detect \
+    --force \
+    ./detected
+
+conan install \
+    --profile=./detected \
+    --profile="$PROJECT_DIR"/conan/profile/gcc-debug \
+    --build=missing \
+    "$@" \
+    "$PROJECT_DIR"
