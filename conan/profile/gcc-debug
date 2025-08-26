@@ -1,0 +1,8 @@
+[settings]
+build_type=Debug
+compiler=gcc
+compiler.libcxx=libstdc++11
+
+[env]
+general:CXXFLAGS="-Werror -Wall -Wconversion -Wextra -Wpedantic -Wconversion -Wno-maybe-uninitialized -Wshadow -fdiagnostics-color=always -fsanitize=address,undefined -fsanitize-undefined-trap-on-error -D_GLIBCXX_ASSERTIONS"
+general:LIBCXX="-fsanitize=address,undefined"

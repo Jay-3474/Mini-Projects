@@ -1,0 +1,36 @@
+{
+  "productName": "VDC Update",
+  "productCode": "L8B2-70712-AAA22354",
+  "baseVersion": "0.0.0",
+  "updateVersion": "22.35.4",
+  "updateNumber": "22.35.4",
+  "preventRollback": "no",
+  "mdmUpdates": [
+    "mmc_appsboot.meta",
+  "mifs.secure.meta",
+  "ifs2.meta",
+  "system.meta",
+  "qnx_std_apps_vm_rootfs.meta",
+  "qnx_crit_apps_vm_rootfs.meta",
+  "vdc-telematics-image-8x96autogvmquintcu.meta",
+  "vdc-sota-image-8x96autogvmquintcu.meta",
+  "tz.meta",
+  "devcfg_auto.meta",
+  "rpm.meta",
+  "pmic.meta",
+  "xbl.meta",
+  "adspso.meta",
+  "NON-HLOS.meta"
+  ],
+  "mcuUpdates": [
+    "VDC_HW_VER_B3.meta",
+  "VDC_HW_VER_B4.meta",
+  "VDC_HW_VER_B5.meta",
+  "VDC_HW_VER_C0.meta"
+  ],
+  "kvdbUpdate": "kvdb.meta",
+  "partitionUpdate": [
+  "gpt_secondary.meta",
+  "gpt_primary.meta"
+  ]
+}

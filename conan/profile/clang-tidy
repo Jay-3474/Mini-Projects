@@ -1,0 +1,11 @@
+[settings]
+build_type=Debug
+compiler=clang
+compiler.libcxx=libstdc++11
+compiler.version=10
+
+[env]
+general:CC="/usr/bin/clang"
+general:CXX="/usr/bin/clang++"
+general:CONAN_CMAKE_TOOLCHAIN_FILE=$PROFILE_DIR/../../toolchain/clang-tidy.cmake
+general:CXXFLAGS="-Werror -Wall -Wconversion -Wextra -Wpedantic -Wconversion -Wshadow -fdiagnostics-color=always"
