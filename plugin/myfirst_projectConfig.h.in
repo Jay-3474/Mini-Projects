@@ -1,0 +1,4 @@
+#define my_first_project_VERSION_MAJOR @my_first_project_VERSION_MAJOR@
+#define my_first_project_VERSION_MINOR @my_first_project_VERSION_MINOR@
+
+#cmakedefine USE_ADDER
